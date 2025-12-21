@@ -12,7 +12,7 @@ char* replace_all(const char *source, regex_t *regex, const char *replacement) {
     char *result = NULL;
     char *cursor = (char *)source;
     regmatch_t match;
-    size_t result_len = 0;
+   // size_t result_len = 0;
     size_t result_cap = 0;
 
     // Сначала проверим, есть ли совпадения, и сформируем новую строку
@@ -42,7 +42,7 @@ char* replace_all(const char *source, regex_t *regex, const char *replacement) {
 
         // Сдвигаем курсор дальше после совпадения
         cursor += suffix_start;
-        result_len = strlen(result);
+       // result_len = strlen(result);
     }
 
     // Если были замены, доливаем остаток строки

@@ -14,3 +14,11 @@ $(TARGET): $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS) $(TARGET)
+
+test: $(TARGET)
+	@echo "Running tests..."
+	@echo "Hello World" > test_make.txt
+	./$(TARGET) test_make.txt 's/World/Make/'
+	@cat test_make.txt
+	@rm test_make.txt
+	@echo "Test finished."	
