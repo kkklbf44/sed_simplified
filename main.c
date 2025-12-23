@@ -2,8 +2,6 @@
 #include "operations.h"
 
 int main(int argc, char *argv[]) {
-    // Проверка количества аргументов
-    // ./sed_simplified input.txt 'command'
     if (argc != 3) {
         printf("Usage: %s <filename> <command>\n", argv[0]);
         return 1;
@@ -15,4 +13,5 @@ int main(int argc, char *argv[]) {
     process_sed_command(filename, command);
 
     return 0;
+
 }
